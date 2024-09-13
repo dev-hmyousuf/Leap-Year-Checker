@@ -4,13 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const yesLeap = document.querySelector(".yesLeap");
     const noLeap = document.querySelector(".NoLeap");
 
-    // Function to update URL parameter
-    function updateURLParameter(name, value) {
-        const url = new URL(window.location);
-        url.searchParams.set(name, value);
-        window.history.replaceState({}, '', url);
-    }
-
     // Function to check leap year and update display
     function isItLeapYear(year) {
         let titleText;
@@ -33,19 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         const yearValue = yearInput.value;
         isItLeapYear(yearValue);
-        updateURLParameter('year', yearValue);
     });
 
-    // Set initial value from URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const yearParam = urlParams.get('year');
-    if (yearParam) {
-        yearInput.value = yearParam;
-        isItLeapYear(yearParam);
-    }
-
-    // Update URL when input changes
+    // Optionally, you can handle input changes if you want to update the title live
     yearInput.addEventListener("input", function() {
-        updateURLParameter('year', yearInput.value);
+        const yearValue = yearInput.value;
+        isItLeapYear(yearValue);
     });
 });
