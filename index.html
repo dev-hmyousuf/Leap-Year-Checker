@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Leap Year Checker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"] {
+            width: 100%; 
+            padding: 10px;
+            font-size: 16px; 
+            border: 2px solid #ccc; 
+            border-radius: 5px; 
+            margin: 10px 0; 
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus{
+            background-color:#498acf ;
+        }
+        #root2 {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            background: #000;
+            color: #dfd;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            font-family: monospace;
+        }
+        #indentify {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #233952;
+            color: #fff;
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            overflow: hidden;
+        }
+        .yesLeap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+        .NoLeap {
+            display: flex;    
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+        .itisleapyear {
+            background-color: #0056b3;
+        }
+        .itisnotleapyear {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Leap Year Checker</h1>
+        <form id="leapYearForm">
+            <input type="number" id="yearValue" placeholder="Enter year">
+            <button type="submit">Check</button>
+        </form>
+    </div>
+    <div id="indentify">
+        <div class="yesLeap">
+            Leap Year
+        </div>
+        <div class="NoLeap">
+            Not Leap Year
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="">
+            Leap Year Checker || Made By H.M.YOUSUF
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
